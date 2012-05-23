@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+	MPMusicPlayerController *musicPlayerController;
+}
+
+@property(strong)MPMusicPlayerController *musicPlayerController;
+@property(strong)IBOutlet UIDatePicker *timePicker;
+
+-(IBAction)goButton:(id)sender;
+-(void)buildPlaylist:(NSNumber *)secs;
 
 @end

@@ -13,11 +13,24 @@
 @end
 
 @implementation ViewController
+@synthesize timePicker,musicPlayerController;
+
+-(void)buildPlaylist:(NSNumber *)secs{
+	MPMediaQuery *entireLibrary = [MPMediaQuery songsQuery];
+	NSArray *libItems = [entireLibrary items];
+	NSLog(@"Items Count: %d",[libItems count]);
+}
+
+-(IBAction)goButton:(id)sender{
+	NSTimeInterval time = [timePicker countDownDuration];
+	NSNumber *secs = [NSNumber numberWithDouble:time];
+	[self buildPlaylist:secs];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	musicPlayerController = [MPMusicPlayerController applicationMusicPlayer];
 }
 
 - (void)viewDidUnload

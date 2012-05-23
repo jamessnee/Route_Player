@@ -20,6 +20,7 @@
 		59180CB7156C57E300B0AAEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59180C98156C57E300B0AAEB /* Foundation.framework */; };
 		59180CBF156C57E300B0AAEB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59180CBD156C57E300B0AAEB /* InfoPlist.strings */; };
 		59180CC2156C57E300B0AAEB /* Route_PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59180CC1156C57E300B0AAEB /* Route_PlayerTests.m */; };
+		59180CCC156C5D8C00B0AAEB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59180CCB156C5D8C00B0AAEB /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +38,22 @@
 		59180C96156C57E300B0AAEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59180C98156C57E300B0AAEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		59180C9A156C57E300B0AAEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		59180C9E156C57E300B0AAEB /* Route_Player-Info.plist */ = {isa = PBXFileReference; path = "Route_Player-Info.plist"; sourceTree = "<group>"; };
+		59180C9E156C57E300B0AAEB /* Route_Player-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Route_Player-Info.plist"; sourceTree = "<group>"; };
 		59180CA0156C57E300B0AAEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59180CA2156C57E300B0AAEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		59180CA4156C57E300B0AAEB /* Route_Player-Prefix.pch */ = {isa = PBXFileReference; path = "Route_Player-Prefix.pch"; sourceTree = "<group>"; };
-		59180CA5156C57E300B0AAEB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		59180CA4156C57E300B0AAEB /* Route_Player-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Route_Player-Prefix.pch"; sourceTree = "<group>"; };
+		59180CA5156C57E300B0AAEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59180CA6156C57E300B0AAEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		59180CA8156C57E300B0AAEB /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		59180CA8156C57E300B0AAEB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		59180CA9156C57E300B0AAEB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		59180CAC156C57E300B0AAEB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		59180CB3156C57E300B0AAEB /* Route_PlayerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Route_PlayerTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59180CB4156C57E300B0AAEB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		59180CBC156C57E300B0AAEB /* Route_PlayerTests-Info.plist */ = {isa = PBXFileReference; path = "Route_PlayerTests-Info.plist"; sourceTree = "<group>"; };
+		59180CBC156C57E300B0AAEB /* Route_PlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Route_PlayerTests-Info.plist"; sourceTree = "<group>"; };
 		59180CBE156C57E300B0AAEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		59180CC0156C57E300B0AAEB /* Route_PlayerTests.h */ = {isa = PBXFileReference; path = Route_PlayerTests.h; sourceTree = "<group>"; };
+		59180CC0156C57E300B0AAEB /* Route_PlayerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Route_PlayerTests.h; sourceTree = "<group>"; };
 		59180CC1156C57E300B0AAEB /* Route_PlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Route_PlayerTests.m; sourceTree = "<group>"; };
+		59180CCB156C5D8C00B0AAEB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59180CCC156C5D8C00B0AAEB /* MediaPlayer.framework in Frameworks */,
 				59180C97156C57E300B0AAEB /* UIKit.framework in Frameworks */,
 				59180C99156C57E300B0AAEB /* Foundation.framework in Frameworks */,
 				59180C9B156C57E300B0AAEB /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +103,7 @@
 		59180C95156C57E300B0AAEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59180CCB156C5D8C00B0AAEB /* MediaPlayer.framework */,
 				59180C96156C57E300B0AAEB /* UIKit.framework */,
 				59180C98156C57E300B0AAEB /* Foundation.framework */,
 				59180C9A156C57E300B0AAEB /* CoreGraphics.framework */,
