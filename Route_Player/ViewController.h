@@ -20,7 +20,9 @@
 @property(strong)IBOutlet UITextView *playlistView;
 
 -(IBAction)goButton:(id)sender;
+-(IBAction)stopButton:(id)sender;
 -(void)startPlayback;
+-(void)stopPlayback;
 
 
 @end

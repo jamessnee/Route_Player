@@ -22,6 +22,14 @@
 	[musicPlayerController play];
 }
 
+-(void)stopPlayback{
+	[musicPlayerController stop];
+}
+
+-(IBAction)stopButton:(id)sender{
+	[self stopPlayback];
+}
+
 -(IBAction)goButton:(id)sender{
 	NSTimeInterval time = [timePicker countDownDuration];
 	NSNumber *secs = [NSNumber numberWithDouble:time];
