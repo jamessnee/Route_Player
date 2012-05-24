@@ -10,13 +10,16 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface ViewController : UIViewController{
+	NSArray *currentPlaylist;
 	MPMusicPlayerController *musicPlayerController;
 }
 
 @property(strong)MPMusicPlayerController *musicPlayerController;
 @property(strong)IBOutlet UIDatePicker *timePicker;
+@property(strong)NSArray *currentPlaylist;
 
 -(IBAction)goButton:(id)sender;
--(void)buildPlaylist:(NSNumber *)secs;
+-(void)startPlayback;
+
 
 @end

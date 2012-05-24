@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5904C5D6156E720100F86544 /* PlayListBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5904C5D5156E720100F86544 /* PlayListBuilder.m */; };
 		59180C97156C57E300B0AAEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59180C96156C57E300B0AAEB /* UIKit.framework */; };
 		59180C99156C57E300B0AAEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59180C98156C57E300B0AAEB /* Foundation.framework */; };
 		59180C9B156C57E300B0AAEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59180C9A156C57E300B0AAEB /* CoreGraphics.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5904C5D4156E720100F86544 /* PlayListBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayListBuilder.h; sourceTree = "<group>"; };
+		5904C5D5156E720100F86544 /* PlayListBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayListBuilder.m; sourceTree = "<group>"; };
 		59180C92156C57E300B0AAEB /* Route_Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route_Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59180C96156C57E300B0AAEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59180C98156C57E300B0AAEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				59180CA8156C57E300B0AAEB /* ViewController.h */,
 				59180CA9156C57E300B0AAEB /* ViewController.m */,
 				59180CAB156C57E300B0AAEB /* ViewController.xib */,
+				5904C5D4156E720100F86544 /* PlayListBuilder.h */,
+				5904C5D5156E720100F86544 /* PlayListBuilder.m */,
 				59180C9D156C57E300B0AAEB /* Supporting Files */,
 			);
 			path = Route_Player;
@@ -265,6 +270,7 @@
 				59180CA3156C57E300B0AAEB /* main.m in Sources */,
 				59180CA7156C57E300B0AAEB /* AppDelegate.m in Sources */,
 				59180CAA156C57E300B0AAEB /* ViewController.m in Sources */,
+				5904C5D6156E720100F86544 /* PlayListBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +440,7 @@
 				59180CC7156C57E300B0AAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59180CC8156C57E300B0AAEB /* Build configuration list for PBXNativeTarget "Route_PlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +449,7 @@
 				59180CCA156C57E300B0AAEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

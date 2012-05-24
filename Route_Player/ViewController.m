@@ -7,24 +7,26 @@
 //
 
 #import "ViewController.h"
+#import "PlayListBuilder.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
-@synthesize timePicker,musicPlayerController;
+@synthesize timePicker,musicPlayerController,currentPlaylist;
 
--(void)buildPlaylist:(NSNumber *)secs{
-	MPMediaQuery *entireLibrary = [MPMediaQuery songsQuery];
-	NSArray *libItems = [entireLibrary items];
-	NSLog(@"Items Count: %d",[libItems count]);
+-(void)startPlayback{
+	MPMediaItemCollection *mediaCollection = [[MPMediaItemCollection alloc]initWithItems:currentPlaylist];
+	[musicPlayerController setQueueWithItemCollection:mediaCollection];
+	[musicPlayerController play];
 }
 
 -(IBAction)goButton:(id)sender{
 	NSTimeInterval time = [timePicker countDownDuration];
 	NSNumber *secs = [NSNumber numberWithDouble:time];
-	[self buildPlaylist:secs];
+	currentPlaylist = [PlayListBuilder buildPlaylist:secs];
+	[self startPlayback];
 }
 
 - (void)viewDidLoad
