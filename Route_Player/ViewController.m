@@ -14,7 +14,7 @@
 @end
 
 @implementation ViewController
-@synthesize timePicker,musicPlayerController,currentPlaylist;
+@synthesize timePicker,musicPlayerController,currentPlaylist,playlistView;
 
 -(void)startPlayback{
 	MPMediaItemCollection *mediaCollection = [[MPMediaItemCollection alloc]initWithItems:currentPlaylist];
@@ -26,6 +26,11 @@
 	NSTimeInterval time = [timePicker countDownDuration];
 	NSNumber *secs = [NSNumber numberWithDouble:time];
 	currentPlaylist = [PlayListBuilder buildPlaylist:secs];
+	NSMutableString *playlistStr = [[NSMutableString alloc]init];
+	for(MPMediaItem *song in currentPlaylist){
+		[playlistStr appendFormat:@"Artist: %@, Title: %@ \n",[song valueForProperty:MPMediaItemPropertyArtist],[song valueForProperty:MPMediaItemPropertyTitle]];
+	}
+	[playlistView setText:playlistStr];
 	[self startPlayback];
 }
 

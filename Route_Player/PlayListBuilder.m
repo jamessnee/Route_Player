@@ -11,7 +11,19 @@
 @implementation PlayListBuilder
 
 +(NSArray *)fitForTime:(NSNumber *)secs withSongs:(NSArray *)songs{
+	NSMutableArray *playlist = [[NSMutableArray alloc]init];
+	NSInteger timeLeft = [secs integerValue];
+	for(MPMediaItem *song in songs){
+		NSInteger duration = [[song valueForProperty:MPMediaItemPropertyPlaybackDuration] integerValue];
+		if (duration<timeLeft) {
+			[playlist addObject:song];
+			timeLeft = timeLeft - duration;
+			NSLog(@"Time Left: %dsecs",timeLeft);
+		}
+	}
+	NSLog(@"Found a playlist with timeleft=%dsecs",timeLeft);
 	
+	return playlist;
 }
 
 +(NSArray *)sortSongArray:(NSArray *)songs byType:(sortType)sType{
@@ -43,7 +55,6 @@
 	NSArray *libItems = [entireLibrary items];
 	libItems = [self sortSongArray:libItems byType:RATING];
 	libItems = [self fitForTime:secs withSongs:libItems];
-
 	return libItems;
 }
 

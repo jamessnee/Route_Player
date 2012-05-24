@@ -17,6 +17,7 @@
 @property(strong)MPMusicPlayerController *musicPlayerController;
 @property(strong)IBOutlet UIDatePicker *timePicker;
 @property(strong)NSArray *currentPlaylist;
+@property(strong)IBOutlet UITextView *playlistView;
 
 -(IBAction)goButton:(id)sender;
 -(void)startPlayback;
