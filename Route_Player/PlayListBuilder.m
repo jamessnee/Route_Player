@@ -20,7 +20,33 @@
 
 #import "PlayListBuilder.h"
 
+//http://stackoverflow.com/questions/791232/canonical-way-to-randomize-an-nsarray-in-objective-c
+static NSUInteger random_below(NSUInteger n) {
+    NSUInteger m = 1;
+    // Compute smallest power of two greater than n.
+    // There's probably a faster solution than this loop, but bit-twiddling
+    // isn't my specialty.
+    do {
+        m <<= 1;
+    } while(m < n);
+    NSUInteger ret;
+    do {
+        ret = random() % m;
+    } while(ret >= n);
+    return ret;
+}
+
 @implementation PlayListBuilder
+
+//http://stackoverflow.com/questions/791232/canonical-way-to-randomize-an-nsarray-in-objective-c
++(NSArray *)shufflePlaylist:(NSArray *)songs{
+	NSMutableArray *songs_m = [[NSMutableArray alloc]initWithArray:songs];
+	for (NSUInteger i = [songs_m count]; i > 1; i--) {
+		NSUInteger j = random_below(i);
+		[songs_m exchangeObjectAtIndex:i-1 withObjectAtIndex:j];
+	}
+	return songs_m;
+}
 
 +(NSArray *)fitForTime:(NSNumber *)secs withSongs:(NSArray *)songs{
 	NSMutableArray *playlist = [[NSMutableArray alloc]init];
@@ -67,6 +93,7 @@
 	NSArray *libItems = [entireLibrary items];
 	libItems = [self sortSongArray:libItems byType:RATING];
 	libItems = [self fitForTime:secs withSongs:libItems];
+	libItems = [self shufflePlaylist:libItems];
 	return libItems;
 }
 

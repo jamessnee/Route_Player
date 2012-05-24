@@ -32,5 +32,6 @@ typedef enum {
 +(NSArray *)buildPlaylist:(NSNumber *)secs;
 +(NSArray *)sortSongArray:(NSArray *)songs byType:(sortType)sType;
 +(NSArray *)fitForTime:(NSNumber *)secs withSongs:(NSArray *)songs;
++(NSArray *)shufflePlaylist:(NSArray *)songs;
 
 @end
