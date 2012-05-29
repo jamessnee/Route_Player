@@ -91,9 +91,12 @@ static NSUInteger random_below(NSUInteger n) {
 +(NSArray *)buildPlaylist:(NSNumber *)secs{
 	MPMediaQuery *entireLibrary = [MPMediaQuery songsQuery];
 	NSArray *libItems = [entireLibrary items];
+	//Sort it
 	libItems = [self sortSongArray:libItems byType:RATING];
-	libItems = [self fitForTime:secs withSongs:libItems];
+	//Shuffle it
 	libItems = [self shufflePlaylist:libItems];
+	//Fit for time
+	libItems = [self fitForTime:secs withSongs:libItems];
 	return libItems;
 }
 
