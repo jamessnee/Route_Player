@@ -21,6 +21,8 @@
 #import <Foundation/Foundation.h>
 #import <MediaPlayer/MediaPlayer.h>
 
+@class PlayList;
+
 typedef enum {
 	RATING,
 	PLAYCOUNT,
@@ -29,7 +31,7 @@ typedef enum {
 
 @interface PlayListBuilder : NSObject
 
-+(NSArray *)buildPlaylist:(NSNumber *)secs;
++(PlayList *)buildPlaylist:(NSNumber *)secs;
 +(NSArray *)sortSongArray:(NSArray *)songs byType:(sortType)sType;
 +(NSArray *)fitForTime:(NSNumber *)secs withSongs:(NSArray *)songs;
 +(NSArray *)shufflePlaylist:(NSArray *)songs;

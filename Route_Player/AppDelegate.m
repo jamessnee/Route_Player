@@ -20,19 +20,21 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "HomeScreen_VC.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize navViewController = _navViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-	self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-	self.window.rootViewController = self.viewController;
+	self.viewController = [[HomeScreen_VC alloc] initWithNibName:@"HomeScreen_V" bundle:nil];
+	self.navViewController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+	self.window.rootViewController = self.navViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

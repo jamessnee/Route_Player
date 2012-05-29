@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  HomeScreen_VC.h
 //  Route_Player
 //
 //  Created by James Snee on 23/05/2012.
@@ -19,15 +19,26 @@
 //, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@class HomeScreen_VC;
+@class PlayList;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface HomeScreen_VC : UIViewController{
+	PlayList *currentPlaylist;
+	MPMusicPlayerController *musicPlayerController;
+}
 
-@property (strong, nonatomic) UIWindow *window;
+@property(strong)MPMusicPlayerController *musicPlayerController;
+@property(strong)IBOutlet UIDatePicker *timePicker;
+@property(strong)PlayList *currentPlaylist;
+@property(strong)IBOutlet UITextView *playlistView;
 
-@property (strong, nonatomic) HomeScreen_VC *viewController;
+-(IBAction)goButton:(id)sender;
+-(void)buildPlaylist;
+-(IBAction)stopButton:(id)sender;
+-(void)startPlayback;
+-(void)stopPlayback;
+-(void)showPlaylistView;
 
-@property (strong, nonatomic) UINavigationController *navViewController;
 
 @end

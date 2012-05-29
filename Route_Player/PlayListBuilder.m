@@ -19,6 +19,7 @@
 //, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import "PlayListBuilder.h"
+#import "PlayList.h"
 
 //http://stackoverflow.com/questions/791232/canonical-way-to-randomize-an-nsarray-in-objective-c
 static NSUInteger random_below(NSUInteger n) {
@@ -88,7 +89,7 @@ static NSUInteger random_below(NSUInteger n) {
 	return sorted;
 }
 
-+(NSArray *)buildPlaylist:(NSNumber *)secs{
++(PlayList *)buildPlaylist:(NSNumber *)secs{
 	MPMediaQuery *entireLibrary = [MPMediaQuery songsQuery];
 	NSArray *libItems = [entireLibrary items];
 	//Sort it
@@ -99,7 +100,8 @@ static NSUInteger random_below(NSUInteger n) {
 	libItems = [self fitForTime:secs withSongs:libItems];
 	//Shuffle again
 	libItems = [self shufflePlaylist:libItems];
-	return libItems;
+	PlayList *playlist = [[PlayList alloc]initWithItems:libItems];
+	return playlist;
 }
 
 @end
