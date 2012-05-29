@@ -97,6 +97,8 @@ static NSUInteger random_below(NSUInteger n) {
 	libItems = [self shufflePlaylist:libItems];
 	//Fit for time
 	libItems = [self fitForTime:secs withSongs:libItems];
+	//Shuffle again
+	libItems = [self shufflePlaylist:libItems];
 	return libItems;
 }
 
